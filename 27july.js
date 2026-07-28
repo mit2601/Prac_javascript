@@ -141,7 +141,7 @@
 // console.log(calculator(multi));
 
 
-const originalCars = [
+const cars = [
   "BMW",
   "Audi",
   "Tesla",
@@ -153,63 +153,63 @@ const originalCars = [
 ];
 
 // push() - Adds one or more elements to the end of the array
-let cars = [...originalCars];
-cars.push("Ford");
-console.log(cars);
+
+// cars.push("Ford");
+// console.log(cars);
 
 // pop() - Removes and returns the last element
-cars = [...originalCars];
-console.log(cars.pop());
-console.log(cars);
+
+// console.log(cars.pop());
+// console.log(cars);
 
 // unshift() - Adds one or more elements to the beginning
-cars = [...originalCars];
-cars.unshift("Ferrari");
-console.log(cars);
+
+// cars.unshift("Ferrari");
+// console.log(cars);
 
 // shift() - Removes and returns the first element
-cars = [...originalCars];
-console.log(cars.shift());
-console.log(cars);
+
+// console.log(cars.shift());
+// console.log(cars);
 
 // includes() - Checks whether an element exists in the array
-cars = [...originalCars];
-console.log(cars.includes("Tesla"));
+
+// console.log(cars.includes("Tesla"));
 
 // indexOf() - Returns the index of the first matching element
-cars = [...originalCars];
-console.log(cars.indexOf("Toyota"));
+
+// console.log(cars.indexOf("Toyota"));
 
 // lastIndexOf() - Returns the index of the last matching element
-cars = [...originalCars];
-cars.push("BMW");
-console.log(cars.lastIndexOf("BMW"));
+
+// cars.push("BMW");
+// console.log(cars.lastIndexOf("BMW"));
 
 // slice() - Returns a shallow copy of a portion of the array
-cars = [...originalCars];
-console.log(cars.slice(2, 5));
-console.log(cars);
+
+// console.log(cars.slice(2, 5));
+// console.log(cars);
 
 // splice() - Adds, removes, or replaces elements in the original array
-cars = [...originalCars];
-cars.splice(2, 2, "Ford", "Volvo");
-console.log(cars);
+
+// cars.splice(2, 2, "Ford", "Volvo");
+// console.log(cars);
 
 // sort() - Sorts the array alphabetically or by custom logic
-cars = [...originalCars];
-cars.sort();
-console.log(cars);
+
+// cars.sort();
+// console.log(cars);
 
 // reverse() - Reverses the order of the array
-cars = [...originalCars];
-cars.reverse();
-console.log(cars);
+
+// cars.reverse();
+// console.log(cars);
 
 // join() - Converts an array into a string
-cars = [...originalCars];
-console.log(cars.join(" | "));
+
+// console.log(cars.join(" | "));
 
 // concat() - Merges two or more arrays
-cars = [...originalCars];
-const luxuryCars = ["Rolls Royce", "Bentley"];
-console.log(cars.concat(luxuryCars));
+
+// const luxuryCars = ["Rolls Royce", "Bentley"];
+// console.log(cars.concat(luxuryCars));
