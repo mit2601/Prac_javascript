@@ -221,6 +221,11 @@ const employees = [
 
 // console.log(message);
 
+let num = [1,2,3,4,5,6];
+
+let newnum = num.map((num)=>num+10)
+                .map((num) => num + 1);  //we can use methods in chain like this like we can implement multiple methods
+console.log(newnum);
 
 
 
