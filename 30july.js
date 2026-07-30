@@ -166,3 +166,64 @@ const response = {     ///dataset code is from Ai
 
 // JS Callback
 
+// function greet(name) {
+//     console.log(`Hello ${name}`);
+// }
+
+// function processUser(callback) {
+//     callback("Mit");
+// }
+
+// processUser(greet);
+
+// function calculate(a, b, operation) {
+//     return operation(a, b);
+// }
+
+// console.log(calculate(10, 20, (a, b) => a + b));
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// numbers.forEach(num => console.log(num));
+
+// const doubled = numbers.map(num => num * 2);
+// console.log(doubled);
+
+// const even = numbers.filter(num => num % 2 === 0);
+// console.log(even);
+
+// const found = numbers.find(num => num === 3);
+// console.log(found);
+
+// const total = numbers.reduce((sum, num) => sum + num, 0);
+// console.log(total);
+
+// console.log("Start");
+
+// setTimeout(() => {
+//     console.log("Executed after 2 seconds");
+// }, 2000);
+
+// let count = 1;
+
+// const timer = setInterval(() => {
+//     console.log(count);
+//     count++;
+
+//     if (count > 5) {
+//         clearInterval(timer);
+//     }
+// }, 1000);
+
+
+// JS is runtime or compiletime?
+
+// so basically js'engine compile code in machine understandable code
+//  and then it will execute line by line so that's why it is both
+
+
+// why js is losely typed language?
+ 
+// js is losely typed language because while declaration of variable we dont have to 
+// assign their type it will decided while runtime that is the beauty of js 
+
