@@ -188,17 +188,17 @@ const car = {
 // console.log(boolean2);
 
 
-// const user1 = {
-//     name: "Mit",
-//     age: 22
-// };
+const user1 = {
+    name: "Mit",
+    age: 22
+};
 
-// const user2 = user1;
+const user2 = user1;
 
-// user2.name = "Rahul";
+user2.name = "Rahul";
 
-// console.log(user1);
-// console.log(user2);
+console.log(user1);
+console.log(user2);
 
 
 // const arr1 = [10, 20, 30];

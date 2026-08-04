@@ -67,5 +67,79 @@
 
 
 
+// diff of three method
+
+// | Feature                         | `Promise.all()`       | `Promise.race()`                   | `Promise.allSettled()`               |
+// | ------------------------------- | --------------------- | ---------------------------------- | ------------------------------------ |
+// | Waits for all Promises          | ✅ Yes                 | ❌ No                               | ✅ Yes                                |
+// | Returns first completed Promise | ❌ No                  | ✅ Yes                              | ❌ No                                 |
+// | Stops if one Promise rejects    | ✅ Yes                 | ❌ No                               | ❌ No                                 |
+// | Returns successful results      | ✅ Only if all succeed | ✅ First settled Promise            | ✅ All results                        |
+// | Returns rejected results        | ❌ No                  | ✅ If first settled Promise rejects | ✅ Yes                                |
+// | Best Use Case                   | Need all data         | Need the fastest result            | Need every result, even if some fail |
+
+
+
+function getUser() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve({
+                id: 1,
+                name: "Mit"
+            });
+        }, 1000);
+    });
+}
+
+function getOrders(userId) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve({
+                orderId: 101,
+                userId
+            });
+        }, 2000);
+    });
+}
+
+function getPayment(orderId) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve({
+                paymentId: 5001,
+                orderId
+            });
+        }, 3000);
+    });
+}
+
+async function processOrder() {
+
+    const user = await getUser();
+
+    const order = await getOrders(user.id);
+
+    const payment = await getPayment(order.orderId);
+
+    console.log(user);
+    console.log(order);
+    console.log(payment);      // it will take time till last function executed like sum of execution time of all awaits
+
+}
+
+processOrder();
+
+
+// method and property
+
+// In JavaScript, the fundamental difference is that a property is a value associated with an object
+//  (like a noun), whereas a method is an action an object can perform (like a verb)
+
+
+// Syntax to 
+// access       object.propertyName     object.methodName() (Uses parentheses)     // here property means what is in object
+                                                                                //and  method means how we can manipulate object
+
+
 
 
