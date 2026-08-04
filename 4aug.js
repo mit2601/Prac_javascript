@@ -123,34 +123,91 @@ const API_URL = "https://jsonplaceholder.typicode.com";
 // exixting post chnage
 
 
-async function updatepost(postId) {
-    try {
+// async function updatepost(postId) {
+//     try {
 
-        const response = await fetch(`${API_URL}/posts/${postId}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                title: "Learning Fetch API",
-                body: "Update using put",
-                userId: 1
-            })
-        });
+//         const response = await fetch(`${API_URL}/posts/${postId}`, {
+//             method: "PUT",
+//             headers: {
+//                 "Content-Type": "application/json"
+//             },
+//             body: JSON.stringify({
+//                 title: "Learning Fetch API",
+//                 body: "Update using put",
+//                 userId: 1
+//             })
+//         });
 
-        if (!response.ok) {
-            throw new Error("Failed to create post");
-        }
+//         if (!response.ok) {
+//             throw new Error("Failed to create post");
+//         }
 
-        const post = await response.json();
+//         const post = await response.json();
 
-        console.log(post);
+//         console.log(post);
 
-    } catch (error) {
+//     } catch (error) {
 
-        console.log(error.message);
+//         console.log(error.message);
 
-    }
-}
+//     }
+// }
 
-updatepost(2);
+// updatepost(2);
+
+// async function patchPost(postId) {
+//     try {
+
+//         const response = await fetch(`${API_URL}/posts/${postId}`, {
+//             method: "PATCH",
+//             headers: {
+//                 "Content-Type": "application/json"
+//             },
+//             body: JSON.stringify({
+//                 title: "Only Title Updated"
+//             })
+//         });
+
+//         if (!response.ok) {
+//             throw new Error("Failed to update post");
+//         }
+
+//         const updatedPost = await response.json();
+
+//         console.log(updatedPost);
+
+//     } catch (error) {
+
+//         console.log(error.message);
+
+//     }
+// }
+
+// patchPost(2);
+
+
+
+// async function deletePost(postId) {
+//     try {
+
+//         const response = await fetch(`${API_URL}/posts/${postId}`, {
+//             method: "DELETE"
+//         });
+
+//         if (!response.ok) {
+//             throw new Error("Failed to delete post");
+//         }
+
+//         console.log(`Post ${postId} deleted successfully`);
+
+//     } catch (error) {
+
+//         console.log(error.message);
+
+//     }
+// }
+
+// deletePost(5);
+
+
+
