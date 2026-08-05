@@ -44,43 +44,43 @@ const API_URL = "https://jsonplaceholder.typicode.com";
 // }
 
 
-// async function getUser(userid) {
-//     try {
-//         const [users, posts, comments] = await Promise.all([
-//             // fetch("https://jsonplaceholder.typicode.com/users/5"),
-//             fetch("https://jsonplaceholder.typicode.com/users"),
-//             // fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userid}`),
-//             fetch(`https://jsonplaceholder.typicode.com/posts`),
-//             fetch("https://jsonplaceholder.typicode.com/comments")
+export default async function getUser(userid) {
+    try {
+        const [users, posts, comments] = await Promise.all([
+            // fetch("https://jsonplaceholder.typicode.com/users/5"),
+            fetch("https://jsonplaceholder.typicode.com/users"),
+            fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userid}`),
+            // fetch(`https://jsonplaceholder.typicode.com/posts`),
+            fetch("https://jsonplaceholder.typicode.com/comments")
 
-//         ]);
+        ]);
 
-//         if (!users.ok || !posts.ok || !comments.ok) {
-//             throw new Error("Failed to fetch data");
-//         }
+        if (!users.ok || !posts.ok || !comments.ok) {
+            throw new Error("Failed to fetch data");
+        }
 
-//         const [userData, postData, commentsData] = await Promise.all([
-//             users.json(),
-//             posts.json(),
-//             comments.json()
-//         ]);
+        const [userData, postData, commentsData] = await Promise.all([
+            users.json(),
+            posts.json(),
+            comments.json()
+        ]);
 
-//         // const name = userData.map(user => user.name);
-//         // console.log(name);
-//         // // console.log(userData.name);
-//         // console.log(typeof userData[0].id);
-//         // let id = 5;
-//         // const name = userData.find(user => user.id == id)?.name ?? "User not found";
-//         // console.log(name);
-//         console.log(postData);
-//         // const postbyuser = postData.filter( user => user.userID === 1);
-//         // console.log(postbyuser);
+        // const name = userData.map(user => user.name);
+        // console.log(name);
+        // // console.log(userData.name);
+        // console.log(typeof userData[0].id);
+        // let id = 5;
+        // const name = userData.find(user => user.id == id)?.name ?? "User not found";
+        // console.log(name);
+        console.log(postData);
+        // const postbyuser = postData.filter( user => user.userID === 1);
+        // console.log(postbyuser);
 
 
-//     } catch (error) {
-//         console.log(error.message);
-//     }
-// }
+    } catch (error) {
+        console.log(error.message);
+    }
+}
 
 // getUser(2);
 
@@ -211,3 +211,4 @@ const API_URL = "https://jsonplaceholder.typicode.com";
 
 
 
+// module.exports = getUser ;
