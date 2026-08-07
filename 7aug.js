@@ -176,4 +176,46 @@
 
 
 // hello undefined 
-// hello Mit
+// // hello Mit
+
+
+// const user = {
+//     name: "Mit"
+// };
+
+// function introduce(age, city) {
+//     console.log(
+//         `My name is ${this.name}, I am ${age}, from ${city}`
+//     );
+// }
+
+// introduce.call(user, 22, "Ahmedabad");
+
+
+// const user = {
+//     name: "Mit"
+// };
+
+// function introduce(age, city) {
+//     console.log(
+//         `My name is ${this.name}, I am ${age}, from ${city}`
+//     );
+// }
+
+// introduce.apply(user, [22, "Ahmedabad"]);
+
+
+
+// const user = {
+//     name: "Mit"
+// };
+
+// function greet() {
+//     console.log(`Hello ${this.name}`);
+// }
+
+// const boundGreet = greet.bind(user);
+
+// boundGreet();
+
+
